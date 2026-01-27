@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Livello A1 - اختبار</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f8fafc; text-align: right; direction: rtl; }
+        .quiz { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; max-width: 500px; margin: auto; }
+        h1 { color: #008C45; text-align: center; }
+        button { background: #CD212A; color: white; border: none; padding: 10px; width: 100%; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="quiz">
+    <h1>Esame Finale A1 🇮🇹</h1>
+    <form id="test">
+        <p>1. "Ragazza" جمعها إيه؟</p>
+        <input type="radio" name="q1" value="a"> Ragazzi | <input type="radio" name="q1" value="b"> Ragazze <br>
+        <p>2. أداة التعريف لـ "Amico" هي:</p>
+        <input type="radio" name="q2" value="a"> Il | <input type="radio" name="q2" value="b"> L' <br>
+        <p>3. تصريف Essere مع Io هو:</p>
+        <input type="radio" name="q3" value="a"> Sono | <input type="radio" name="q3" value="b"> Sei <br><br>
+        <button type="button" onclick="check()">النتيجة</button>
+    </form>
+    <p id="res" style="text-align:center; font-weight:bold;"></p>
+</div>
+<script>
+    function check(){
+        let s = 0;
+        if(document.forms.test.q1.value=='b') s++;
+        if(document.forms.test.q2.value=='b') s++;
+        if(document.forms.test.q3.value=='a') s++;
+        document.getElementById('res').innerHTML = "درجتك: " + s + " من 3";
+    }
+</script>
+</body>
+</html>
