@@ -1,37 +1,62 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Test Livello A1 - اختبار</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 اختبار المستوى A1</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; background-color: #f8fafc; text-align: right; direction: rtl; }
-        .quiz { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; max-width: 500px; margin: auto; }
-        h1 { color: #008C45; text-align: center; }
-        button { background: #CD212A; color: white; border: none; padding: 10px; width: 100%; cursor: pointer; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; text-align: center; }
+        .quiz-container { background: white; padding: 25px; border-radius: 15px; max-width: 600px; margin: auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { color: #CD212A; }
+        .question { margin: 20px 0; text-align: right; font-weight: bold; }
+        .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        button { padding: 10px; border: 1px solid #008C45; border-radius: 5px; cursor: pointer; background: white; transition: 0.3s; }
+        button:hover { background: #008C45; color: white; }
+        #result { margin-top: 20px; font-weight: bold; font-size: 1.2em; color: #008C45; }
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #666; color: white; text-decoration: none; border-radius: 5px; }
     </style>
 </head>
 <body>
-<div class="quiz">
-    <h1>Esame Finale A1 🇮🇹</h1>
-    <form id="test">
-        <p>1. "Ragazza" جمعها إيه؟</p>
-        <input type="radio" name="q1" value="a"> Ragazzi | <input type="radio" name="q1" value="b"> Ragazze <br>
-        <p>2. أداة التعريف لـ "Amico" هي:</p>
-        <input type="radio" name="q2" value="a"> Il | <input type="radio" name="q2" value="b"> L' <br>
-        <p>3. تصريف Essere مع Io هو:</p>
-        <input type="radio" name="q3" value="a"> Sono | <input type="radio" name="q3" value="b"> Sei <br><br>
-        <button type="button" onclick="check()">النتيجة</button>
-    </form>
-    <p id="res" style="text-align:center; font-weight:bold;"></p>
-</div>
-<script>
-    function check(){
-        let s = 0;
-        if(document.forms.test.q1.value=='b') s++;
-        if(document.forms.test.q2.value=='b') s++;
-        if(document.forms.test.q3.value=='a') s++;
-        document.getElementById('res').innerHTML = "درجتك: " + s + " من 3";
-    }
-</script>
+
+    <div class="quiz-container">
+        <h1>🏆 اختبار نهاية المستوى A1</h1>
+        <div id="quiz">
+            <div class="question">1. ما هي أداة التعريف المناسبة لكلمة (Libro)؟</div>
+            <div class="options">
+                <button onclick="check(1, 'il')">il</button>
+                <button onclick="check(1, 'la')">la</button>
+            </div>
+
+            <div class="question">2. تصريف فعل Essere مع (Io) هو:</div>
+            <div class="options">
+                <button onclick="check(2, 'sei')">sei</button>
+                <button onclick="check(2, 'sono')">sono</button>
+            </div>
+
+            <div class="question">3. كلمة (Ragazza) تجمع بـ:</div>
+            <div class="options">
+                <button onclick="check(3, 'Ragazze')">Ragazze</button>
+                <button onclick="check(3, 'Ragazzi')">Ragazzi</button>
+            </div>
+        </div>
+        <div id="result"></div>
+        <a href="../index.html" class="btn-back">⬅️ العودة للفهرس</a>
+    </div>
+
+    <script>
+        let score = 0;
+        let answered = 0;
+        function check(q, val) {
+            answered++;
+            if (q === 1 && val === 'il') score++;
+            if (q === 2 && val === 'sono') score++;
+            if (q === 3 && val === 'Ragazze') score++;
+            
+            if (answered === 3) {
+                document.getElementById('result').innerHTML = "درجتك هي: " + score + " من 3";
+                if (score === 3) document.getElementById('result').innerHTML += " 🥳 برنس في الإيطالي!";
+            }
+        }
+    </script>
 </body>
 </html>
