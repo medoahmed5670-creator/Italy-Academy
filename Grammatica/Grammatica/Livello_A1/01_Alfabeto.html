@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>L'alfabeto - الحروف</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. الحروف والنطق - L'alfabeto</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f9f9f9; text-align: right; direction: rtl; }
-        h1 { color: #008C45; border-bottom: 2px solid #CD212A; padding-bottom: 10px; text-align: center; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
+        .lesson-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 800px; margin: auto; }
+        h1 { color: #008C45; border-bottom: 2px solid #CD212A; padding-bottom: 10px; }
+        .alphabet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin: 20px 0; }
+        .letter { background: #eee; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 1.2em; }
         .note { background: #fff3cd; padding: 15px; border-right: 5px solid #ffeeba; margin: 20px 0; }
-        .letter { font-weight: bold; color: #CD212A; font-size: 1.2em; }
-        .ita { direction: ltr; text-align: left; display: inline-block; }
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #666; color: white; text-decoration: none; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <h1>L'alfabeto Italiano 🇮🇹 (الحروف الإيطالية)</h1>
-    
-    <p>بص يا سيدي، الإيطالي لغة "اللي بتنطقه بتكتبه"، ودي أحلى حاجة فيها. هما 21 حرف أساسي، وفيه 5 حروف تانية بتيجي في الكلمات الأجنبية.</p>
+    <div class="lesson-card">
+        <h1>🇮🇹 الدرس الأول: الحروف والنطق (L'alfabeto)</h1>
+        
+        <p>اللغة الإيطالية بتتكون من <strong>21 حرف أساسي</strong>، ودول اللي بنستخدمهم في الكلمات الإيطالية الأصلية.</p>
 
-    <div class="note">
-        <strong>💡 معلومة على الماشي:</strong> الحروف المتحركة (Vowels) في الإيطالي هما روح اللغة: 
-        <span class="letter ita">A, E, I, O, U</span>. من غيرهم مش هتعرف تفتح بقك بالإيطالي!
+        <div class="alphabet-grid">
+            <div class="letter">A (آ)</div>
+            <div class="letter">B (بـي)</div>
+            <div class="letter">C (تـشي)</div>
+            <div class="letter">D (دي)</div>
+            <div class="letter">E (إيه)</div>
+            <div class="letter">F (إفّي)</div>
+            <div class="letter">G (دجي)</div>
+            <div class="letter">H (آكّا)</div>
+            <div class="letter">I (إي)</div>
+            <div class="letter">L (إلّي)</div>
+            <div class="letter">M (إمّي)</div>
+            <div class="letter">N (إنّي)</div>
+            <div class="letter">O (أو)</div>
+            <div class="letter">P (بـي)</div>
+            <div class="letter">Q (كو)</div>
+            <div class="letter">R (إرّي)</div>
+            <div class="letter">S (إسّي)</div>
+            <div class="letter">T (تـي)</div>
+            <div class="letter">U (اوو)</div>
+            <div class="letter">V (فـي)</div>
+            <div class="letter">Z (دزيتا)</div>
+        </div>
+
+        <div class="note">
+            <strong>💡 معلومة مهمة:</strong> حرف <strong>H</strong> في الإيطالية "صامت" دايماً، يعني مش بيتنطق خالص!
+        </div>
+
+        <h3>⚠️ الحروف الأجنبية (5 حروف):</h3>
+        <p>الحروف دي بتيجي بس في الكلمات اللي أصلها مش إيطالي (زي كلمة Sandwich):</p>
+        <p>J (إيلونجا) - K (كابّا) - W (دوبيا فو) - X (إيكس) - Y (إبسيلون)</p>
+
+        <a href="../index.html" class="btn-back">⬅️ العودة للفهرس</a>
     </div>
-
-    <h2>قواعد النطق (الخلاصة بالمصري):</h2>
-    <ul>
-        <li><span class="letter ita">C + e / i:</span> بتتنطق "تش" زي <em class="ita">Ciao</em> (تشاو).</li>
-        <li><span class="letter ita">C + a / o / u:</span> بتتنطق "ك" زي <em class="ita">Casa</em> (كازا).</li>
-        <li><span class="letter ita">G + e / i:</span> بتتنطق "جـ" معطشة زي <em class="ita">Gelato</em> (چيلاتو).</li>
-        <li><span class="letter ita">H:</span> الحرف ده "غلبان" في الإيطالي، ملوش صوت خالص (Muta).</li>
-    </ul>
-
-    <p style="text-align: center;">
-        <a href="../../README.md" style="text-decoration: none; color: blue;">⬅️ ارجع لخريطة القواعد</a>
-    </p>
 
 </body>
 </html>
